@@ -1,0 +1,46 @@
+body{
+    background-color: #e9e8e7;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.home-page-content {
+    display: flex;    
+}
+
+.about-me-container {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 90px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    width: 500px;
+    justify-content: space-between;
+}
+
+li {
+    
+    text-decoration: none;
+}
+
+
+
+
