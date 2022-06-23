@@ -1,7 +1,13 @@
 body{
-    background-color: #e9e8e7;
+    background-color: #ebebeb;
     display: flex;
+    font-family: 'Lato';
     justify-content: center;
+}
+
+.home-page-content {
+    display: flex;
+    align-items: center;
 }
 
 img {
@@ -9,19 +15,27 @@ img {
     max-height: 400px;
 }
 
-.home-page-content {
-    display: flex;    
-}
 
 .about-me-container {
     margin-left: 50px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     max-width: 500px;
+    height: 100vh;
 }
 
 h1 {
-    font-size: 90px;
+    font-size: 70px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    margin-top: 0px;
+}
+
+p {
+    font-size: 20px;
 }
 
 nav {
@@ -34,6 +48,7 @@ ul {
     list-style-type: none;
     width: 500px;
     justify-content: space-between;
+    padding-left: 0px;
 }
 
 li {
