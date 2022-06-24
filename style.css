@@ -1,20 +1,30 @@
-body{
-    background-color: rgba(235, 235, 235, 0.776);
-    color: rgb(39, 89, 57);
+
+ body{
+    background-color: rgb(247, 247, 247);
+    color: rgb(70, 74, 71);
     display: flex;
     font-family: 'Lato';
-    justify-content: center;
+    justify-content: center;   
 }
 
-.home-page-content {
+ .home-page-content {
     display: flex;
     align-items: center;
+    
 }
 
 img {
-    max-width: 400px;
+    max-width: 450px;
     max-height: 400px;
     margin-left: 20px;
+}
+
+.hi {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    font-size: 400px;
+    opacity: 0.1;
 }
 
 .about-me-container {
@@ -22,12 +32,14 @@ img {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 400px;
     height: 100vh;
 }
 
+
+
 h1 {
-    font-size: 70px;
+    font-size: 60px;
     margin-top: 0px;
     margin-bottom: 0px;
     
@@ -35,11 +47,12 @@ h1 {
 
 h2 {
     margin-top: 0px;
+    margin-bottom: 10px;
     font-weight: 100;
 }
 
 p {
-    font-size: 20px;
+    font-size: 18px;
     margin-right: 20px;
 }
 
@@ -62,6 +75,20 @@ li {
     text-decoration: none;
 }
 
+/* darkmode styling */
+
+.dark {
+    background-color: rgb(70, 74, 71);
+    color: rgb(247, 247, 247);
+}
+
+/* functionality styling */
+
+.hide {
+    display: none;
+}
+
+/* media query styling */
 @media only screen and (max-width: 600px) {
     .home-page-content{
         display: flex;
