@@ -1,30 +1,40 @@
+.dark #luxe-hahn {
+    color: white;
+    background-color: none;
+}
 
+.dark .bio {
+    color: white;
+}
+
+.dark {
+    background-color: rgb(70, 74, 71);
+    color: rgb(247, 247, 247);
+}
+ 
  body{
-    background-color: rgb(247, 247, 247);
+    background-color: #eff0f3;
     color: rgb(70, 74, 71);
     display: flex;
     font-family: 'Lato';
     justify-content: center;   
 }
 
+.fa-moon, .fa-sun {
+    display: flex;
+    justify-content: right;
+    
+}
+
  .home-page-content {
     display: flex;
-    align-items: center;
-    
+    align-items: center;   
 }
 
 img {
     max-width: 450px;
     max-height: 400px;
-    margin-left: 20px;
-}
-
-.hi {
-    position: relative;
-    display: flex;
-    justify-content: left;
-    font-size: 400px;
-    opacity: 0.1;
+    margin-left: 20px;   
 }
 
 .about-me-container {
@@ -33,12 +43,11 @@ img {
     justify-content: center;
     flex-direction: column;
     max-width: 400px;
-    height: 100vh;
+    height: 100vh;   
 }
 
-
-
 h1 {
+    color: #0d0d0d;
     font-size: 60px;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -46,6 +55,7 @@ h1 {
 }
 
 h2 {
+    color: #8f8f8f;
     margin-top: 0px;
     margin-bottom: 10px;
     font-weight: 100;
@@ -54,33 +64,34 @@ h2 {
 p {
     font-size: 18px;
     margin-right: 20px;
+    color: #2a2a2a;
 }
 
-nav {
+.nav-container {
     display: flex;
-    justify-content: flex-start;
-    margin-right: 20px;
+    justify-content: left;
+    max-width: 400px;
 }
 
 ul {
     display: flex;
     list-style-type: none;
-    width: 400px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     font-weight: 900;
     padding-left: 0px;
 }
 
 li {
+    color: #0d0d0d;
+    padding: 7px;
+    border-radius: 2px;
     text-decoration: none;
 }
 
-/* darkmode styling */
-
-.dark {
-    background-color: rgb(70, 74, 71);
-    color: rgb(247, 247, 247);
+li:hover {
+    background-color: #b8b8b8;
 }
+
 
 /* functionality styling */
 
