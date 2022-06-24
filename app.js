@@ -15,10 +15,15 @@ const bio = document.querySelector('.bio')
 
 const profilePic = document.querySelector('img')
 
-const experienceLi = document.querySelector('.experience')
+const projectsLi = document.querySelector('.projects-li')
 
-const experiencePage = document.querySelector('#experience')
+const projectsPage = document.querySelector('.projects')
 
+const experienceLi = document.querySelector('.experience-li')
+
+const experiencePage = document.querySelector('.experience')
+
+const projectsCarousel = document.querySelector('.carousel')
 
 // turn on dark mode
 function darkMode() {
@@ -44,13 +49,26 @@ function hideMain() {
     homePageContent.classList.add('hide');
 }
 
-// navList.addEventListener('click', hideMain);
+//show main page
+function showMain() {
+    homePageContent.classList.remove('hide');
+}
+
+//Load projects page
+function projectsPageClicked() {
+    hideMain();
+    experiencePage.classList.add('hide')
+    projectsPage.classList.remove('hide');
+}
+
+projectsLi.addEventListener('click', projectsPageClicked);
 
 
-//when clicking experience page - hide main, remove hide from experience page
+//Load experience page
 function experiencePageClicked() {
     hideMain();
     experiencePage.classList.remove('hide')
+    projectsPage.classList.add('hide');
     
 }
 

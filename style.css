@@ -15,10 +15,13 @@
     background-color: rgb(70, 74, 71);
     color: rgb(247, 247, 247);
 }
+
+/* BIO PAGE */
  
  body{
     background-color: #eff0f3;
     color: rgb(70, 74, 71);
+    margin: auto;
     display: flex;
     font-family: 'Lato';
     justify-content: center;  
@@ -37,21 +40,27 @@
     }
 }
 
-.fa-moon, .fa-sun {
-    display: flex;
-    justify-content: right;
-    
+#main {
+    width: 100%;
 }
 
  .home-page-content {
+    width: 100%;
     display: flex;
-    align-items: center;   
+    align-items: center; 
+}
+
+.nav-left {
+    width: 200px;
+    display: flex;
+    justify-content: left;
+    cursor: pointer;
 }
 
 img {
     max-width: 450px;
     max-height: 400px;
-    margin-left: 20px;  
+    margin-left: 110px;  
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
 }
 
@@ -60,7 +69,7 @@ img {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    max-width: 400px;
+    width: 400px;
     height: 100vh;   
     position: relative;
 }
@@ -109,15 +118,62 @@ p {
 
 li:hover {
     background-color: #b8b8b8;
+    cursor: pointer;
 }
 
-/* functionality styling */
+/* PROJECTS PAGE */
+
+.projects {
+    border: 2px solid black;
+    width: 300px;
+    positon: relative;
+}
+
+.carousel-item {
+    height: 300px;
+    background-color: gray;
+}
+
+.carousel-nav {
+    width: 100%;
+    padding 20px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.carousel-btn {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: rgb(247, 247, 247, 0.6);
+    border-radius: 50%;
+}
+
+
+/* EXPERIENCE PAGE */
+
+.heading {
+    font-size: 30px;
+}
+
+.rdh {
+    font-size: 20px;
+}
+
+.info {
+    font-size: 15px;
+    line-height: .5;
+}
+
+/* HIDE ELEMENTS */
 
 .hide {
     display: none;
 }
 
-/* media query styling */
+/* MEDIA QUERY */
 @media only screen and (max-width: 600px) {
     .home-page-content{
         display: flex;
