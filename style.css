@@ -1,20 +1,34 @@
+
+/* DARK MODE */
 .dark #luxe-hahn {
-    color: white;
+    color: #eff0f3;
     background-color: none;
-}
-
-.dark .bio {
-    color: white;
-}
-
-.dark img {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .dark {
     background-color: rgb(70, 74, 71);
     color: rgb(247, 247, 247);
 }
+
+.dark .bio, .dark .skills, .dark .education, .dark .rdh {
+    color: #eff0f3;
+}
+
+.dark, .info, .dark .small {
+    color: #8f8f8f;
+}
+
+
+.dark img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* RAINBOW EXPLOSION MODE */
+.rainbow #luxe-hahn {
+    animation: color-animation 1s linear infinite;
+}
+
 
 /* BIO PAGE */
  
@@ -54,6 +68,7 @@
     width: 200px;
     display: flex;
     justify-content: left;
+    flex-direction: column;
     cursor: pointer;
 }
 
@@ -97,15 +112,16 @@ p {
 
 .nav-container {
     display: flex;
-    justify-content: left;
-    max-width: 400px;
+    /* justify-content: left; */
+    /* max-width: 400px; */
 }
 
 .main-ul {
     display: flex;
     list-style-type: none;
-    justify-content: space-evenly;
-    font-weight: 900;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    /* font-weight: 900; */
     padding-left: 0px;
 }
 
@@ -153,18 +169,54 @@ li:hover {
 
 
 /* EXPERIENCE PAGE */
+.experience {
+    margin-top: 100px;
+    padding: 20px;
+    width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    animation: fadein 1s;
+}
 
-.heading {
-    font-size: 30px;
+@keyframes fadein {
+    0% {
+    opacity:0;
+    }
+    50%{
+    opacity:0.6;
+    }
+    100% {
+    opacity:1;
+    }
+}
+
+.skills, .education, .rdh {
+    font-weight: 900;
+    font-size: 40px;
+}
+.skills {
+    margin-bottom: 10px;
+}
+.education {
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .rdh {
     font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 2px;
 }
 
 .info {
+    font-size: 20px;
+}
+
+p, .small {
     font-size: 15px;
-    line-height: .5;
+    font-weight: 100;
+    margin-top: 2px;
 }
 
 /* HIDE ELEMENTS */

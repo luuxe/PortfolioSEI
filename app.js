@@ -29,7 +29,7 @@ const projectsCarousel = document.querySelector('.carousel')
 function darkMode() {
     body.classList.add('dark');
     bio.classList.add('dark');
-    profilePic.classList.add('dark')
+    profilePic.classList.add('dark');
 }
 
 moon.addEventListener('click', darkMode)
@@ -39,7 +39,6 @@ moon.addEventListener('click', darkMode)
 function lightMode() {
     body.classList.remove('dark');
     bio.classList.remove('dark')
-
 }
 
 sun.addEventListener('click', lightMode)
