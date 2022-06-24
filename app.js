@@ -13,12 +13,18 @@ const luxehahn = document.querySelector('#luxe-hahn');
 
 const bio = document.querySelector('.bio')
 
+const profilePic = document.querySelector('img')
+
+const experienceLi = document.querySelector('.experience')
+
+const experiencePage = document.querySelector('#experience')
+
 
 // turn on dark mode
 function darkMode() {
     body.classList.add('dark');
-    h1.classList.add('dark');
-    bio.classList.add('dark')
+    bio.classList.add('dark');
+    profilePic.classList.add('dark')
 }
 
 moon.addEventListener('click', darkMode)
@@ -27,7 +33,6 @@ moon.addEventListener('click', darkMode)
 //turn on light mode
 function lightMode() {
     body.classList.remove('dark');
-    h1.classList.remove('dark')
     bio.classList.remove('dark')
 
 }
@@ -39,8 +44,17 @@ function hideMain() {
     homePageContent.classList.add('hide');
 }
 
-navList.addEventListener('click', hideMain);
+// navList.addEventListener('click', hideMain);
 
+
+//when clicking experience page - hide main, remove hide from experience page
+function experiencePageClicked() {
+    hideMain();
+    experiencePage.classList.remove('hide')
+    
+}
+
+experienceLi.addEventListener('click', experiencePageClicked)
 
 
 
