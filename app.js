@@ -46,6 +46,7 @@ sun.addEventListener('click', lightMode)
 //hide main page
 function hideMain() {
     homePageContent.classList.add('hide');
+
 }
 
 //show main page

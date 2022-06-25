@@ -33,6 +33,7 @@
 /* BIO PAGE */
  
  body{
+     width: 100%;
     background-color: #eff0f3;
     color: rgb(70, 74, 71);
     margin: auto;
@@ -59,23 +60,16 @@
 }
 
  .home-page-content {
-    width: 100%;
+    width: 70%;
     display: flex;
-    align-items: center; 
-}
-
-.nav-left {
-    width: 200px;
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-    cursor: pointer;
+    align-items: center;
+    
 }
 
 img {
-    max-width: 450px;
-    max-height: 400px;
-    margin-left: 110px;  
+    max-width: 500px;
+    max-height: 500px;
+    margin-left: 50px;  
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
 }
 
@@ -111,15 +105,13 @@ p {
 }
 
 .nav-container {
-    display: flex;
-    /* justify-content: left; */
-    /* max-width: 400px; */
+    width: 15%;
+    border: 1px solid black;
 }
 
 .main-ul {
-    display: flex;
+    display: inline;
     list-style-type: none;
-    flex-direction: column;
     /* justify-content: space-evenly; */
     /* font-weight: 900; */
     padding-left: 0px;
@@ -132,8 +124,20 @@ p {
     text-decoration: none;
 }
 
+.empty-space {
+    width: 15%;
+    border: 1px solid black;
+}
+
+.sun-moon:hover {
+    color: black;
+}
+
 li:hover {
-    background-color: #b8b8b8;
+    background-color: #8f8f8f;
+}
+
+li, .sun-moon {
     cursor: pointer;
 }
 
