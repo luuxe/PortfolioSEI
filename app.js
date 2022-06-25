@@ -11,9 +11,11 @@ const sun = document.querySelector('.fa-sun')
 
 const luxehahn = document.querySelector('#luxe-hahn');
 
-const bio = document.querySelector('.bio')
-
 const profilePic = document.querySelector('img')
+
+const bioText = document.querySelector('.bio-content')
+
+const bioLi = document.querySelector('.bio-li')
 
 const projectsLi = document.querySelector('.projects-li')
 
@@ -28,7 +30,7 @@ const projectsCarousel = document.querySelector('.carousel')
 // turn on dark mode
 function darkMode() {
     body.classList.add('dark');
-    bio.classList.add('dark');
+    bioText.classList.add('dark');
     profilePic.classList.add('dark');
 }
 
@@ -38,7 +40,7 @@ moon.addEventListener('click', darkMode)
 //turn on light mode
 function lightMode() {
     body.classList.remove('dark');
-    bio.classList.remove('dark')
+    bioText.classList.remove('dark')
 }
 
 sun.addEventListener('click', lightMode)
@@ -49,10 +51,14 @@ function hideMain() {
 
 }
 
-//show main page
-function showMain() {
+//Load bio page
+function bioPageClicked() {
     homePageContent.classList.remove('hide');
+    experiencePage.classList.add('hide')
+    projectsPage.classList.add('hide')
 }
+
+bioLi.addEventListener('click', bioPageClicked)
 
 //Load projects page
 function projectsPageClicked() {

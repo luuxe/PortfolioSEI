@@ -33,14 +33,17 @@
 /* BIO PAGE */
  
  body{
-     width: 100%;
+    width: 100%;
     background-color: #eff0f3;
     color: rgb(70, 74, 71);
     margin: auto;
     display: flex;
     font-family: 'Lato';
-    justify-content: center;  
-    animation: fadein 2.5s; 
+    justify-content: center;   
+}
+
+.home-page-content, .projects, .experience {
+    animation: fadein 2.5s;
 }
 
 @keyframes fadein {
@@ -67,8 +70,8 @@
 }
 
 img {
-    max-width: 500px;
-    max-height: 500px;
+    max-width: 60%;
+    max-height: 60%;
     margin-left: 50px;  
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
 }
@@ -106,16 +109,41 @@ p {
 
 .nav-container {
     width: 15%;
-    border: 1px solid black;
+    display: flex;
 }
 
 .main-ul {
-    display: inline;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    transform-origin: (0, 0);
+    transform: rotate(270deg);
+    display: flex;
     list-style-type: none;
     /* justify-content: space-evenly; */
     /* font-weight: 900; */
     padding-left: 0px;
 }
+
+/* .nav-container {
+    width: 15%;
+    height: 100vh;
+    border: 1px solid black;
+    display: flex;
+    align-items: flex-end;
+}
+
+.main-ul {
+    display: inline-block;
+    text-transform: uppercase;
+    transform-origin: (0, 0);
+    transform: rotate(270deg);
+    list-style-type: none;
+    padding-left: 0px;
+} */
 
 .main {
     color: #0d0d0d;
@@ -126,7 +154,7 @@ p {
 
 .empty-space {
     width: 15%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .sun-moon:hover {
@@ -144,13 +172,21 @@ li, .sun-moon {
 /* PROJECTS PAGE */
 
 .projects {
-    border: 2px solid black;
-    width: 300px;
+    /* border: 2px solid black; */
+    width: 70%;
     positon: relative;
+}
+
+.carousel-projects{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel-item {
     height: 300px;
+    width: 300px;
     background-color: gray;
 }
 
@@ -163,24 +199,30 @@ li, .sun-moon {
     text-align: center;
 }
 
-.carousel-btn {
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    background-color: rgb(247, 247, 247, 0.6);
-    border-radius: 50%;
-}
-
 
 /* EXPERIENCE PAGE */
 .experience {
-    margin-top: 100px;
     padding: 20px;
-    width: 500px;
-    height: 100%;
+    margin-bottom: 10px;
+    width: 70%;
     display: flex;
+    align-items: center;
     flex-direction: column;
     animation: fadein 1s;
+}
+
+.experience-container {
+    width: 80%;
+}
+
+.brand-statement-container {
+    text-align: center;
+}
+
+.brand-statement {
+    font-size: 45px;
+    margin-bottom: 10px;
+    font-style: italic;
 }
 
 @keyframes fadein {
@@ -209,7 +251,7 @@ li, .sun-moon {
 
 .rdh {
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 2px;
 }
 
