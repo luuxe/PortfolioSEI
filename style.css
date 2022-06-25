@@ -2,15 +2,13 @@
 /* DARK MODE */
 .dark #luxe-hahn {
     color: #eff0f3;
-    background-color: none;
 }
 
 .dark {
     background-color: rgb(70, 74, 71);
-    color: rgb(247, 247, 247);
 }
 
-.dark .bio, .dark .skills, .dark .education, .dark .rdh {
+.dark .bio-content, .dark .skills, .dark .education, .dark .rdh, .dark .main {
     color: #eff0f3;
 }
 
@@ -18,9 +16,8 @@
     color: #8f8f8f;
 }
 
-
 .dark img {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.6);
 }
 
 
@@ -30,8 +27,8 @@
 }
 
 
+
 /* BIO PAGE */
- 
  body{
     width: 100%;
     background-color: #eff0f3;
@@ -42,7 +39,18 @@
     justify-content: center;   
 }
 
-.home-page-content, .projects, .experience {
+/*  WELCOME PAGE */
+.welcome {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.welcome, .home-page-content, .projects, .experience {
     animation: fadein 2.5s;
 }
 
@@ -58,10 +66,6 @@
     }
 }
 
-#main {
-    width: 100%;
-}
-
  .home-page-content {
     width: 70%;
     display: flex;
@@ -72,8 +76,8 @@
 img {
     max-width: 60%;
     max-height: 60%;
-    margin-left: 50px;  
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    margin-left: 100px;  
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2); 
 }
 
 .about-me-container {
@@ -82,8 +86,7 @@ img {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 400px;
-    height: 100vh;   
+    width: 600px;
     position: relative;
 }
 
@@ -98,14 +101,30 @@ h1 {
 h2 {
     color: #8f8f8f;
     margin-top: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     font-weight: 100;
 }
 
-p {
-    font-size: 18px;
+.bio-content {
+    font-size: 16px;
     margin-right: 20px;
+    margin-bottom: 30px;
+    font-weight: 300;
     color: #2a2a2a;
+}
+
+.socials {
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: black;
+}
+
+.socials a:hover {
+    color: grey;
 }
 
 .nav-container {
@@ -121,6 +140,7 @@ p {
     justify-content: space-evenly;
     text-transform: uppercase;
     transform: rotate(270deg);
+    font-size: 20px;
     display: flex;
     list-style-type: none;
     /* justify-content: space-evenly; */
@@ -193,6 +213,11 @@ li, .sun-moon {
 
 .experience-container {
     width: 80%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .brand-statement-container {
@@ -236,6 +261,7 @@ li, .sun-moon {
 }
 
 .info {
+    font-weight: 300;
     font-size: 20px;
 }
 
@@ -244,7 +270,6 @@ p, .small {
     font-weight: 100;
     margin-top: 2px;
 }
-
 /* HIDE ELEMENTS */
 
 .hide {

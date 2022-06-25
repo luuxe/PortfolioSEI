@@ -1,9 +1,18 @@
-
 const body = document.querySelector('body');
+
+const welcomePage = document.querySelector('.welcome')
 
 const homePageContent = document.querySelector('.home-page-content')
 
 const navList = document.querySelector('ul')
+
+const navContainer = document.querySelector('.nav-container')
+
+const emptySpace = document.querySelector('.empty-space')
+
+const darkModeSpan = document.querySelector('.dark-mode-span')
+
+const lightModeSpan = document.querySelector('.light-mode-span')
 
 const moon = document.querySelector('.fa-moon')
 
@@ -27,6 +36,21 @@ const experiencePage = document.querySelector('.experience')
 
 const projectsCarousel = document.querySelector('.carousel')
 
+//welcome screen toggle
+//hide nav bar bio page
+// const darkModeSelected = moon.addEventListener('click', darkMode)
+// const lightModeSelected = sun.addEventListener('click', lightMode)
+
+function welcome() {
+    homePageContent.classList.remove('hide');
+    navContainer.classList.remove('hide');
+    emptySpace.classList.remove('hide')
+}
+
+function hideWelcome() {
+    welcomePage.classList.add('hide');
+}
+
 // turn on dark mode
 function darkMode() {
     body.classList.add('dark');
@@ -34,8 +58,11 @@ function darkMode() {
     profilePic.classList.add('dark');
 }
 
-moon.addEventListener('click', darkMode)
-
+moon.addEventListener('click', () => {
+    darkMode();
+    hideWelcome();
+    welcome();
+})
 
 //turn on light mode
 function lightMode() {
@@ -43,7 +70,12 @@ function lightMode() {
     bioText.classList.remove('dark')
 }
 
-sun.addEventListener('click', lightMode)
+sun.addEventListener('click', () => {
+    lightMode();
+    hideWelcome();
+    welcome();
+})
+
 
 //hide main page
 function hideMain() {
