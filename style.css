@@ -154,7 +154,6 @@ li, .sun-moon {
 }
 
 /* PROJECTS PAGE */
-
 .projects {
     /* border: 2px solid black; */
     width: 70%;
@@ -177,6 +176,7 @@ li, .sun-moon {
 .carousel-button-prev, .carousel-button-next {
     font-size: 20px;
 }
+
 
 
 
