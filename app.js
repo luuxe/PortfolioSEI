@@ -114,18 +114,14 @@ experienceLi.addEventListener('click', experiencePageClicked)
 
 //modal function
 
-const modal = document.getElementById("modal");
-const email = btn = document.getElementById("email");
-const span = document.getElementsByClassName("close")[0];
 
-email.onclick = function() {
-    modal.style.display = "block";
-  }
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
+const emailIcon = document.getElementById("email-icon");
+const emailText = document.getElementById("email-text")
+
+emailIcon.addEventListener('mouseover', () => {
+    emailText.classList.remove('hide');
+})
+
+emailIcon.addEventListener('mouseout', () => {
+    emailText.classList.add('hide');
+})
