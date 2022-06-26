@@ -125,14 +125,18 @@ emailIcon.addEventListener('mouseout', () => {
 //projects carousel
 // let currentImg = 0;
 // let prevImg = 0;
+
 let imageNum = 0;
 
-const prevBtn = document.querySelector('.prev')
-const nextBtn = document.querySelector('.prev')
+const previous = document.querySelector('.previous')
+const next = document.querySelector('.next')
+
 const images = document.getElementsByClassName('carousel-image');
 
 function showImage(i) {
     imageNum++;
+
+    console.log(images.length);
 
     for (let i = 0; i < images.length; i++) {
         images[i].style.display = "none";
@@ -149,10 +153,11 @@ function showImage(i) {
     images[imageNum].style.display = "block";
 }
 
-showImage(0);
 
-prevBtn.addEventListener('click', showImage(-1))
-nextBtn.addEventListener('click', showImage(1))
+previous.addEventListener('click', showImage(-1));
+next.addEventListener('click', showImage(1));
+
+
 
 
 

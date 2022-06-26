@@ -120,32 +120,6 @@ h2 {
     color: grey;
 }
 
-.modal {
-    display: none;
-    /* position: fixed; */
-    z-index: 1;
-    width: 120px;
-    padding: 0;
-}
-
-.modal-content {
-    margin: auto;
-    background-color: rgb(197, 196, 196);
-}
-
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
 
 .nav-container {
     width: 15%;
@@ -215,8 +189,8 @@ li, .sun-moon {
 }
 
 
-.prev, .next {
-    font-size: 20px;
+#previous, #next {
+    font-size: 40px;
     cursor: pointer;
 }
 
@@ -293,11 +267,13 @@ p, .small {
     font-weight: 100;
     margin-top: 2px;
 }
+
 /* HIDE ELEMENTS */
 
 .hide {
     display: none;
 }
+
 
 /* MEDIA QUERY */
 @media only screen and (max-width: 600px) {
