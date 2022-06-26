@@ -37,10 +37,6 @@ const experiencePage = document.querySelector('.experience')
 const projectsCarousel = document.querySelector('.carousel')
 
 //welcome screen toggle
-//hide nav bar bio page
-// const darkModeSelected = moon.addEventListener('click', darkMode)
-// const lightModeSelected = sun.addEventListener('click', lightMode)
-
 function welcome() {
     homePageContent.classList.remove('hide');
     navContainer.classList.remove('hide');
@@ -112,9 +108,8 @@ function experiencePageClicked() {
 
 experienceLi.addEventListener('click', experiencePageClicked)
 
-//modal function
 
-
+//email functionality
 const emailIcon = document.getElementById("email-icon");
 const emailText = document.getElementById("email-text")
 
@@ -125,3 +120,62 @@ emailIcon.addEventListener('mouseover', () => {
 emailIcon.addEventListener('mouseout', () => {
     emailText.classList.add('hide');
 })
+
+
+//projects carousel
+// let currentImg = 0;
+// let prevImg = 0;
+let imageNum = 0;
+
+const prevBtn = document.querySelector('.prev')
+const nextBtn = document.querySelector('.prev')
+const images = document.getElementsByClassName('carousel-image');
+
+function showImage(i) {
+    imageNum++;
+
+    for (let i = 0; i < images.length; i++) {
+        images[i].style.display = "none";
+    }
+
+    if (imageNum > images.length - 1) {
+        imageNum = 0;
+    }
+
+    if (imageNum < 0) {
+        imageNum = images.length - 1;
+    }
+    
+    images[imageNum].style.display = "block";
+}
+
+showImage(0);
+
+prevBtn.addEventListener('click', showImage(-1))
+nextBtn.addEventListener('click', showImage(1))
+
+
+
+
+
+// prevBtn.addEventListener('click', () => {
+//     console.log('prev clicked')
+//     prevImg = currentImg;
+//     currentImg--;
+//     if (currentImg < 0) {
+//         currentImg = images.length - 1;
+//     }
+//     images[prevImg].style.display = "none";
+//     images[currentImg].style.display = "block";
+// });
+
+// nextBtn.addEventListener('click', () => {
+//     console.log('next clicked')
+//     prevImg = currentImg;
+//     currentImg++;
+//     if (currentImg < 0) {
+//         currentImg = images.length - 1;
+//     }
+//     images[prevImg].style.display = "none";
+//     images[currentImg].style.display = "block";
+// });

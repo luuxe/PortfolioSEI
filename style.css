@@ -31,6 +31,7 @@
 /* BIO PAGE */
  body{
     width: 100%;
+    height: 100vh;
     background-color: #eff0f3;
     color: rgb(70, 74, 71);
     margin: auto;
@@ -53,15 +54,9 @@
 }
 
 @keyframes fadein {
-    0% {
-    opacity:0;
-    }
-    50%{
-    opacity:0.6;
-    }
-    100% {
-    opacity:1;
-    }
+    0% {opacity:0;}
+    50% {opacity:0.6;}
+    100% {opacity:1;}
 }
 
  .home-page-content {
@@ -200,26 +195,29 @@ li, .sun-moon {
 
 /* PROJECTS PAGE */
 .projects {
-    /* border: 2px solid black; */
     width: 70%;
     positon: relative;
+
 }
 
-.carousel-projects{
+.carousel-container {
+    border: 1px solid black;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} 
 
-.carousel-item {
+.carousel-image {
     height: 300px;
     width: 300px;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
-.carousel-button-prev, .carousel-button-next {
+
+.prev, .next {
     font-size: 20px;
+    cursor: pointer;
 }
 
 
