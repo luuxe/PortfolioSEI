@@ -18,6 +18,8 @@ const moon = document.querySelector('.fa-moon')
 
 const sun = document.querySelector('.fa-sun')
 
+const rainbow = document.querySelector('.fa-rainbow')
+
 const luxehahn = document.querySelector('#luxe-hahn');
 
 const profilePic = document.querySelector('img')
@@ -40,7 +42,7 @@ const projectsCarousel = document.querySelector('.carousel')
 function welcome() {
     homePageContent.classList.remove('hide');
     navContainer.classList.remove('hide');
-    emptySpace.classList.remove('hide')
+    emptySpace.classList.remove('hide');
 }
 
 function hideWelcome() {
@@ -72,6 +74,18 @@ sun.addEventListener('click', () => {
     welcome();
 })
 
+//turn on rainbow mode
+function rainbowMode() {
+    body.classList.add('rainbow')
+    document.querySelector('.main-img').classList.add('hide');
+    document.querySelector('.rainbow-img').classList.remove('hide');
+}
+
+rainbow.addEventListener('click', () => {
+    rainbowMode();
+    hideWelcome();
+    welcome();
+})
 
 //hide main page
 function hideMain() {
@@ -123,64 +137,58 @@ emailIcon.addEventListener('mouseout', () => {
 
 
 //projects carousel
-// let currentImg = 0;
-// let prevImg = 0;
+// function showImage(i) {
+//     imageNum++;
 
-let imageNum = 0;
+//     console.log(images.length);
+
+//     for (let i = 0; i < images.length; i++) {
+//         images[i].style.display = "none";
+//     }
+
+//     if (imageNum > images.length - 1) {
+//         imageNum = 0;
+//     }
+
+//     if (imageNum < 0) {
+//         imageNum = images.length - 1;
+//     }
+    
+//     images[imageNum].style.display = "block";
+// }
+
+
+// previous.addEventListener('click', showImage(-1));
+// next.addEventListener('click', showImage(1));
+
+let currentImg = 0;
+let prevImg = 0;
+
+// let imageNum = 0;
 
 const previous = document.querySelector('.previous')
 const next = document.querySelector('.next')
 
 const images = document.getElementsByClassName('carousel-image');
 
-function showImage(i) {
-    imageNum++;
 
-    console.log(images.length);
-
-    for (let i = 0; i < images.length; i++) {
-        images[i].style.display = "none";
+next.addEventListener('click', () => {
+    prevImg = currentImg;
+    currentImg++;
+    images[prevImg].style.display = "none";
+    if (currentImg >= images.length) {
+        currentImg = 0;
     }
+    images[currentImg].style.display = "block";
+});
 
-    if (imageNum > images.length - 1) {
-        imageNum = 0;
+
+previous.addEventListener('click', () => {
+    prevImg = currentImg;
+    currentImg--;
+    if (currentImg < 0) {
+        currentImg = images.length - 1;
     }
-
-    if (imageNum < 0) {
-        imageNum = images.length - 1;
-    }
-    
-    images[imageNum].style.display = "block";
-}
-
-
-previous.addEventListener('click', showImage(-1));
-next.addEventListener('click', showImage(1));
-
-
-
-
-
-
-
-// prevBtn.addEventListener('click', () => {
-//     console.log('prev clicked')
-//     prevImg = currentImg;
-//     currentImg--;
-//     if (currentImg < 0) {
-//         currentImg = images.length - 1;
-//     }
-//     images[prevImg].style.display = "none";
-//     images[currentImg].style.display = "block";
-// });
-
-// nextBtn.addEventListener('click', () => {
-//     console.log('next clicked')
-//     prevImg = currentImg;
-//     currentImg++;
-//     if (currentImg < 0) {
-//         currentImg = images.length - 1;
-//     }
-//     images[prevImg].style.display = "none";
-//     images[currentImg].style.display = "block";
-// });
+    images[prevImg].style.display = "none";
+    images[currentImg].style.display = "block";
+});

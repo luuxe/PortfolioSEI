@@ -22,9 +22,45 @@
 
 
 /* RAINBOW EXPLOSION MODE */
-.rainbow #luxe-hahn {
-    animation: color-animation 1s linear infinite;
+.rainbow li:hover {
+    background-color: rgb(245, 63, 202);
 }
+
+.rainbow #luxe-hahn, .rainbow li, .rainbow .socials {
+    animation: colorchange 5s linear infinite;
+}
+
+@keyframes colorchange {
+    0% {
+        color: #AB46D2;
+      }
+      
+    20% {      
+        color: #FF6FB5;
+      }
+
+    40% {
+        color: #66b8a9;
+    }
+
+    60% {
+        color: #2e8a62;
+    }
+      
+    80% {
+        color: #FCF69C;
+    }
+    100% {
+        color: #eba8c8;
+      }
+    }
+
+.rainbow {
+    background-color: pink;
+}
+
+
+
 
 
 
@@ -59,6 +95,23 @@
     100% {opacity:1;}
 }
 
+.fa-moon, .fa-sun, .fa-rainbow {
+    font-size: 30px;
+    color:#8f8f8f
+}
+
+.fa-moon:hover {
+    color: black;
+}
+
+.fa-sun:hover {
+    color: rgb(232, 232, 155);
+}
+
+.fa-rainbow:hover {
+    color: rgb(206, 55, 105);
+}
+
  .home-page-content {
     width: 70%;
     display: flex;
@@ -72,6 +125,8 @@ img {
     margin-left: 100px;  
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2); 
 }
+
+
 
 .about-me-container {
     margin-left: 60px;
@@ -155,15 +210,8 @@ h2 {
     /* border: 1px solid black; */
 }
 
-.fa-sun:hover, .fa-moon:hover {
-    color: black;
-}
-
 li:hover {
     background-color: #8f8f8f;
-}
-
-li, .sun-moon {
     cursor: pointer;
 }
 
@@ -175,7 +223,6 @@ li, .sun-moon {
 }
 
 .carousel-container {
-    border: 1px solid black;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -186,15 +233,18 @@ li, .sun-moon {
     height: 300px;
     width: 300px;
     border: 1px solid black;
+    display: none;
+}
+
+.carousel-image img:first-of-type {
+    display: block;
 }
 
 
-#previous, #next {
+.previous, .next {
     font-size: 40px;
     cursor: pointer;
 }
-
-
 
 
 /* EXPERIENCE PAGE */
