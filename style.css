@@ -22,11 +22,12 @@
 
 
 /* RAINBOW EXPLOSION MODE */
-.rainbow li:hover {
-    background-color: rgb(245, 63, 202);
+
+.rainbow li {
+    color: #AB46D2;
 }
 
-.rainbow #luxe-hahn {
+.rainbow #luxe-hahn, .rainbow {
     animation: colorchange 5s linear infinite;
 }
 
@@ -76,7 +77,7 @@
 
 /*  WELCOME PAGE */
 .welcome {
-    height: 100vh;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -84,7 +85,8 @@
 }
 
 .welcome h1 {
-    font-size: 80px;
+    font-size: 100px;
+    color: rgb(70, 74, 71);
 }
 
 .welcome, .home-page-content, .projects, .experience {
@@ -98,9 +100,13 @@
 }
 
 .welcome-ul {
+    width: 50%;
+    padding: 0;
     font-size: 30px;
     color:#8f8f8f;
     list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .fa-moon:hover {
@@ -153,7 +159,7 @@ h2 {
     color: #8f8f8f;
     margin-top: 0px;
     margin-bottom: 30px;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .bio-content {
@@ -198,6 +204,7 @@ h2 {
     text-transform: uppercase;
     transform: rotate(270deg);
     font-size: 20px;
+    font-weight: 300;
     list-style-type: none;
     padding-left: 5px;
 }
@@ -219,6 +226,10 @@ h2 {
 .main-ul li:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.welcome-li:hover {
+    color: #8f8f8f;
 }
 
 /* PROJECTS PAGE */
@@ -250,6 +261,12 @@ h2 {
 .carousel-image img:first-of-type{
     margin: auto;
     display: block;
+}
+
+.carousel-image p{
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 900;
 }
 
 .previous, .next {

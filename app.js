@@ -83,8 +83,8 @@ function rainbowMode() {
 
 rainbow.addEventListener('click', () => {
     rainbowMode();
-    hideWelcome();
-    welcome();
+    // hideWelcome();
+    // welcome();
 })
 
 //hide main page
@@ -144,31 +144,7 @@ emailIcon.addEventListener('mouseout', () => {
 })
 
 
-//projects carousel
-// function showImage(i) {
-//     imageNum++;
-
-//     console.log(images.length);
-
-//     for (let i = 0; i < images.length; i++) {
-//         images[i].style.display = "none";
-//     }
-
-//     if (imageNum > images.length - 1) {
-//         imageNum = 0;
-//     }
-
-//     if (imageNum < 0) {
-//         imageNum = images.length - 1;
-//     }
-    
-//     images[imageNum].style.display = "block";
-// }
-
-
-// previous.addEventListener('click', showImage(-1));
-// next.addEventListener('click', showImage(1));
-
+//projects carousel *** code from SEI - Corgi Carousel exercise ***
 let currentImg = 0;
 let prevImg = 0;
 
@@ -199,3 +175,10 @@ previous.addEventListener('click', () => {
     images[prevImg].style.display = "none";
     images[currentImg].style.display = "block";
 });
+
+
+//welcome page animation ***code from W3 Schools***
+//https://www.w3schools.com/howto/howto_js_typewriter.asp
+
+
+
