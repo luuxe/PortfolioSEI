@@ -83,6 +83,10 @@
     align-items: center;
 }
 
+.welcome h1 {
+    font-size: 80px;
+}
+
 .welcome, .home-page-content, .projects, .experience {
     animation: fadein 2.5s;
 }
