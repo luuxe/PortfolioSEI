@@ -97,9 +97,10 @@
     100% {opacity:1;}
 }
 
-.fa-moon, .fa-sun, .fa-rainbow {
+.welcome-ul {
     font-size: 30px;
-    color:#8f8f8f
+    color:#8f8f8f;
+    list-style-type: none;
 }
 
 .fa-moon:hover {
@@ -108,10 +109,12 @@
 
 .fa-sun:hover {
     color: rgb(232, 232, 155);
+    background-color: none;
 }
 
 .fa-rainbow:hover {
     color: rgb(206, 55, 105);
+    background-color: none;
 }
 
  .home-page-content {
@@ -213,8 +216,8 @@ h2 {
     /* border: 1px solid black; */
 }
 
-li:hover {
-    background-color: #8f8f8f;
+.main-ul li:hover {
+    text-decoration: underline;
     cursor: pointer;
 }
 

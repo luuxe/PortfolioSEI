@@ -93,6 +93,14 @@ function hideMain() {
 
 }
 
+//show main page
+function refreshPage() {
+    window.location.reload();
+}
+
+document.querySelector('.welcome-li').addEventListener('click', refreshPage)
+
+
 //Load bio page
 function bioPageClicked() {
     homePageContent.classList.remove('hide');
@@ -102,6 +110,7 @@ function bioPageClicked() {
 
 bioLi.addEventListener('click', bioPageClicked)
 
+
 //Load projects page
 function projectsPageClicked() {
     hideMain();
@@ -110,7 +119,6 @@ function projectsPageClicked() {
 }
 
 projectsLi.addEventListener('click', projectsPageClicked);
-
 
 //Load experience page
 function experiencePageClicked() {
