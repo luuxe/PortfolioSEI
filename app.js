@@ -52,7 +52,6 @@ function hideWelcome() {
 // turn on dark mode
 function darkMode() {
     body.classList.add('dark');
-    bioText.classList.add('dark');
     profilePic.classList.add('dark');
 }
 
@@ -65,7 +64,6 @@ moon.addEventListener('click', () => {
 //turn on light mode
 function lightMode() {
     body.classList.remove('dark');
-    bioText.classList.remove('dark')
 }
 
 sun.addEventListener('click', () => {

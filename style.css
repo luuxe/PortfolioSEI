@@ -1,15 +1,16 @@
 
 /* DARK MODE */
-.dark #luxe-hahn {
-    color: #eff0f3;
-}
-
 .dark {
     background-color: rgb(66, 67, 66);
 }
 
+.dark #luxe-hahn {
+    color: #eff0f3;
+}
+
 .dark .bio-content, .dark .skills, .dark .education, .dark .rdh, .dark .main {
     color: #f1f2ea;
+    background-color: none;
 }
 
 .dark, .info, .dark .small {
@@ -22,13 +23,16 @@
 
 
 /* RAINBOW EXPLOSION MODE */
-
-.rainbow li {
-    color: #AB46D2;
+.rainbow {
+    background-color: pink;
 }
 
-.rainbow #luxe-hahn, .rainbow {
-    animation: colorchange 5s linear infinite;
+.rainbow .bio-content {
+    color: black;
+}
+
+.rainbow #luxe-hahn, .rainbow .skills, .rainbow .education, .rainbow .rdh, .rainbow li, .rainbow .carousel-image {
+    animation: colorchange 4s linear infinite;
 }
 
 @keyframes colorchange {
@@ -39,11 +43,9 @@
     20% {      
         color: #FF6FB5;
       }
-
     40% {
         color: #66b8a9;
     }
-
     60% {
         color: #2e8a62;
     }
@@ -55,12 +57,6 @@
         color: #eba8c8;
       }
     }
-
-.rainbow {
-    background-color: pink;
-}
-
-
 
 
 /* BIO PAGE */
@@ -382,21 +378,21 @@ p, .small {
     }
 
     h1 {
-        font-size: 40px;
+        font-size: 45px;
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 25px;
         margin-bottom: 15px;
     }
 
     .bio-content {
-        font-size: 12px;
+        font-size: 15px;
         margin-right: 0px;
     }
 
     .info {
-        font-size: 16px;
+        font-size: 18px;
         text-align: center;
     }
 
@@ -413,6 +409,15 @@ p, .small {
 @media only screen and (max-width: 500px) {
     body {
         overflow: hidden;
+    }
+
+    .welcome h1 {
+        font-size: 70px;
+    }
+
+    .welcome-ul {
+        display: flex;
+        justify-content: space-between;
     }
 
     .empty-space {
@@ -438,19 +443,19 @@ p, .small {
     }
 
     li {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     h1 {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     h2 {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .bio-content{
-        font-size: 10px;
+        font-size: 14px;
         margin-left: 0px;
         margin-bottom: 10px;
     }
@@ -460,15 +465,15 @@ p, .small {
     }
     
     .skills, .education {
-        font-size: 30px;
+        font-size: 32px;
     }
 
     .rdh {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .info {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .socials {
