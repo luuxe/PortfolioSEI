@@ -169,8 +169,7 @@ let prevImg = 0;
 const previous = document.querySelector('.previous')
 const next = document.querySelector('.next')
 
-const images = document.getElementsByClassName('carousel-image');
-
+const images = document.querySelectorAll('.carousel-image');
 
 next.addEventListener('click', () => {
     prevImg = currentImg;

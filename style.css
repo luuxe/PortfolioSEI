@@ -26,7 +26,7 @@
     background-color: rgb(245, 63, 202);
 }
 
-.rainbow #luxe-hahn, .rainbow li, .rainbow .socials {
+.rainbow #luxe-hahn {
     animation: colorchange 5s linear infinite;
 }
 
@@ -175,6 +175,11 @@ h2 {
     color: grey;
 }
 
+#email-text {
+    font-size: 14px;
+    padding-bottom: 4px;
+}
+
 
 .nav-container {
     width: 15%;
@@ -190,17 +195,15 @@ h2 {
     text-transform: uppercase;
     transform: rotate(270deg);
     font-size: 20px;
-    display: flex;
     list-style-type: none;
-    /* justify-content: space-evenly; */
-    /* font-weight: 900; */
-    padding-left: 0px;
+    padding-left: 5px;
 }
 
 
 .main {
     color: #0d0d0d;
-    padding: 7px;
+    padding: 20px;
+    padding-bottom: 2px;
     border-radius: 2px;
     text-decoration: none;
 }
@@ -218,8 +221,7 @@ li:hover {
 /* PROJECTS PAGE */
 .projects {
     width: 70%;
-    positon: relative;
-
+    position: relative;
 }
 
 .carousel-container {
@@ -230,13 +232,19 @@ li:hover {
 } 
 
 .carousel-image {
-    height: 300px;
-    width: 300px;
-    border: 1px solid black;
+    margin: auto;
+    text-align: center;
     display: none;
 }
 
-.carousel-image img:first-of-type {
+.carousel-image img {
+    max-width: 90%;
+    max-height: 80%
+}
+
+
+.carousel-image img:first-of-type{
+    margin: auto;
     display: block;
 }
 
@@ -318,46 +326,143 @@ p, .small {
     margin-top: 2px;
 }
 
+/* MEDIA QUERY */
+/* laptop view */
+@media only screen and (max-width: 1024px) {
+    img {
+        margin-left: 50px;
+    }
+    .about-me-container {
+        width: 50%;
+        height: 50%;
+        margin-left: 30px;
+        margin-right: 0px;
+    }
+}
+
+/* Tablet view */
+@media only screen and (max-width: 800px) {
+    img {
+        max-width: 50%;
+        max-height: 50%;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .home-page-content {
+        width: 90%;
+        margin-top: 100px;
+    }
+
+    .about-me-container {
+        width: 50%;
+        height: 50%;
+        margin-left: 20px;
+        margin-right: 0px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .bio-content {
+        font-size: 12px;
+        margin-right: 0px;
+    }
+
+    .info {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
+
+    .carousel-image img {
+        margin: 0px 50px 0px 50px;
+    }
+  }
+
+  /* mobile view */
+@media only screen and (max-width: 500px) {
+    body {
+        overflow: hidden;
+    }
+
+    .empty-space {
+        display: 10%;
+    }
+
+    .home-page-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    img {
+        margin-left: 100px;
+        margin-top: 20px;
+    }
+
+    .about-me-container{
+        width: 85%;
+        height: 35%;
+        text-align: right;
+        display: fixed;
+        position: relative;
+    }
+
+    li {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 12px;
+    }
+
+    .bio-content{
+        font-size: 10px;
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
+
+    .experience{
+        text-align: center;
+    }
+    
+    .skills, .education {
+        font-size: 30px;
+    }
+
+    .rdh {
+        font-size: 14px;
+    }
+
+    .info {
+        font-size: 12px;
+    }
+
+    .socials {
+        font-size: 16px;
+    }
+
+    .previous, .next {
+        font-size: 16px;
+    }
+
+}
+
 /* HIDE ELEMENTS */
 
 .hide {
     display: none;
 }
-
-
-/* MEDIA QUERY */
-@media only screen and (max-width: 600px) {
-    .home-page-content{
-        display: flex;
-        flex-direction: column-reverse;
-        overflow: hidden;
-        margin-right: 60px;
-        align-items: center;
-    }
-    img {
-        max-width: 50vh;
-        display: flex;
-        position: absolute;
-
-    }
-    .about-me-container {
-        display: flex;
-        justify-content: flex-start;
-        position: relative;
-        height: 800px;
-        width: 45vh;
-        margin-left: 100px;
-        margin-top: 20px;
-    }
-
-    h1 {
-        font-size: 60px;
-    }
-
-    ul {
-        width: 300px;
-    }
-
-  }
-
-
