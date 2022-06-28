@@ -51,3 +51,5 @@ Additionally, my code is extremely repetitive and at a later date, I would like 
 
 ## Final remarks
 I put a lot of effort into this project and I am extremely proud of the product. I look forward to growing this site as my skills develop.
+
+view my live page here: https://luxehahn.netlify.app/
