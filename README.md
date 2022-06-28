@@ -6,7 +6,7 @@ I sketched out a basic layout on an expo board, knowing I would want a minimalis
 ![Project1-wireframe](https://user-images.githubusercontent.com/104602440/176069369-86dbec7f-d480-4c3f-a759-a099a37c8522.jpg)
 
 
-From here, it evolved into the my final submission.
+From here, it evolved into my final submission.
 
 <img width="512" alt="portfolio-light" src="https://user-images.githubusercontent.com/104602440/176073242-9b053ff5-160c-495a-8081-c54b95bdd684.png">
 
