@@ -83,27 +83,7 @@
 .welcome h1 {
     font-size: 100px;
     margin-bottom: 10px;
-    animation: colorchange 4s linear infinite;
 }
-
-@keyframes colorchange {
-    0% {
-        color: #303030;
-      }
-      
-    40% {
-        color: #777777;
-    }
-    60% {
-        color: #d3d3d3;   
-    }
-    80% {
-        color: #555555;
-    }
-    100% {
-        color: #111111;
-      }
-    }
 
 .welcome, .home-page-content, .projects, .experience {
     animation: fadein 2.5s;
