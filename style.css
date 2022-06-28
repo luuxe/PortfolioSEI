@@ -425,6 +425,12 @@ p, .small {
         font-size: 70px;
     }
 
+    .welcome p {
+        text-align: center;
+        font-size: 12px;
+        width: 300px;
+    }
+
     .welcome-ul {
         display: flex;
         justify-content: space-between;
