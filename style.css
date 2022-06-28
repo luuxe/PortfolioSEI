@@ -82,27 +82,56 @@
 
 .welcome h1 {
     font-size: 100px;
-    color: rgb(70, 74, 71);
+    margin-bottom: 10px;
+    animation: colorchange 4s linear infinite;
 }
+
+@keyframes colorchange {
+    0% {
+        color: #303030;
+      }
+      
+    40% {
+        color: #777777;
+    }
+    60% {
+        color: #d3d3d3;   
+    }
+    80% {
+        color: #555555;
+    }
+    100% {
+        color: #111111;
+      }
+    }
 
 .welcome, .home-page-content, .projects, .experience {
     animation: fadein 2.5s;
 }
 
 @keyframes fadein {
-    0% {opacity:0;}
-    50% {opacity:0.6;}
-    100% {opacity:1;}
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:0.5;
+    }
+    100% {
+        opacity:1;
+    }
 }
 
 .welcome-ul {
     width: 50%;
     padding: 0;
-    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 40px;
     color:#8f8f8f;
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
+    cursor: pointer;
 }
 
 .fa-moon:hover {
@@ -110,13 +139,14 @@
 }
 
 .fa-sun:hover {
-    color: rgb(232, 232, 155);
+    color: rgb(205, 205, 205);
     background-color: none;
 }
 
 .fa-rainbow:hover {
     color: rgb(206, 55, 105);
     background-color: none;
+    cursor: pointer;
 }
 
  .home-page-content {
@@ -241,8 +271,6 @@ h2 {
     align-items: center;
 } 
 
-
-
 .carousel-image {
     margin: auto;
     text-align: center;
@@ -252,6 +280,7 @@ h2 {
 .carousel-image img {
     max-width: 90%;
     max-height: 80%;
+    display: none;
 }
 
 .carousel-image img:first-of-type{
@@ -332,13 +361,13 @@ h2 {
 }
 
 .info {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 18px;
 }
 
 p, .small {
-    font-size: 15px;
-    font-weight: 100;
+    font-size: 16px;
+    font-weight: 300;
     margin-top: 2px;
 }
 
@@ -366,7 +395,7 @@ p, .small {
     }
 
     .home-page-content {
-        width: 90%;
+        width: 95%;
         margin-top: 100px;
     }
 
@@ -393,6 +422,7 @@ p, .small {
 
     .info {
         font-size: 18px;
+        font-weight: 400;
         text-align: center;
     }
 

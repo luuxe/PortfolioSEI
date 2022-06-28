@@ -112,8 +112,10 @@ bioLi.addEventListener('click', bioPageClicked)
 //Load projects page
 function projectsPageClicked() {
     hideMain();
+    document.querySelector('.carousel-image').style.display = "block";
     experiencePage.classList.add('hide')
     projectsPage.classList.remove('hide');
+    
 }
 
 projectsLi.addEventListener('click', projectsPageClicked);
@@ -173,10 +175,6 @@ previous.addEventListener('click', () => {
     images[prevImg].style.display = "none";
     images[currentImg].style.display = "block";
 });
-
-
-//welcome page animation ***code from W3 Schools***
-//https://www.w3schools.com/howto/howto_js_typewriter.asp
 
 
 
