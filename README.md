@@ -47,5 +47,7 @@ I would also like to link my projects to my GitHub and display the links for int
 
 Another issue I found is that my email hover function is not quite right on mobile. I would assume there's different verbage for mobile interactions that I have not learned yet. Not sure how you're supposed to mouse over/out with a finger :)
 
+Additionally, my code is extremely repetitive and at a later date, I would like to refactor it.
+
 ## Final remarks
 I put a lot of effort into this project and I am extremely proud of the product. I look forward to growing this site as my skills develop.
