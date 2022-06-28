@@ -258,7 +258,7 @@ h2 {
 }
 
 .carousel-image img {
-    max-width: 90%;
+    max-width: 100%;
     max-height: 80%;
     display: none;
 }
@@ -269,13 +269,15 @@ h2 {
 }
 
 .carousel-image p{
-    margin-top: 20px;
+    /* margin-top: 20px; */
     font-size: 30px;
     font-weight: 900;
 }
 
 .previous, .next {
-    font-size: 40px;
+    font-size: 45px;
+    margin-left: 10px;
+    margin-right: 10px;
     cursor: pointer;
 }
 
@@ -421,6 +423,9 @@ p, .small {
         overflow: hidden;
     }
 
+    .welcome {
+        width: 100%;
+    }
     .welcome h1 {
         font-size: 70px;
     }
@@ -428,7 +433,6 @@ p, .small {
     .welcome p {
         text-align: center;
         font-size: 12px;
-        width: 300px;
     }
 
     .welcome-ul {
@@ -443,6 +447,7 @@ p, .small {
     .home-page-content{
         display: flex;
         flex-direction: column;
+        margin-left: 30px;
     }
 
     img {
@@ -474,6 +479,15 @@ p, .small {
         font-size: 14px;
         margin-left: 0px;
         margin-bottom: 10px;
+    }
+
+    .projects {
+        margin-left: 30px;
+        width: 80%;
+    }
+
+    .carousel-image p {
+        font-size: 20px;
     }
 
     .experience{
