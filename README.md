@@ -41,7 +41,7 @@ I also implemented rainbow mode in a hidden Easter Egg on the site - did you fin
 
 
 # Unsolved Issues/Hurdles
-I had quite a bit of trouble with my projects carousel, it may have taken me about 5hrs in total on that thing. It does still present a bug when clicking off of the page, it displays two image containers instead of one. I believe this is an issue with my HTML and CSS formatting, as the JS for the carousel works seemlessly.
+I had quite a bit of trouble with my projects carousel, it may have taken me about 5hrs in total on that thing. It does still present a bug when clicking off of the page, it displays two image containers instead of one. I believe this is an issue with my HTML and CSS formatting, as the JS for the carousel works seamlessly.
 
 I would also like to link my projects to my GitHub and display the links for interaction. I have not had a chance to create repositories for those just yet.
 
