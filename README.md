@@ -8,7 +8,9 @@ I sketched out a basic layout on an expo board, knowing I would want a minimalis
 
 From here, it evolved into the my final submission.
 
-<img width="320" alt="portfolio-light" src="https://user-images.githubusercontent.com/104602440/176069283-080e1087-49e7-4d13-9bd1-a1c1f4a049b1.png">
+<img width="512" alt="portfolio-light" src="https://user-images.githubusercontent.com/104602440/176073242-9b053ff5-160c-495a-8081-c54b95bdd684.png">
+
+<img width="512" alt="portfolio-dark" src="https://user-images.githubusercontent.com/104602440/176073267-79ad818f-1379-42f6-a5b1-7c198925970d.png">
 
 # MVP Goals
 1. Have a welcome/greeting page
@@ -20,7 +22,11 @@ From here, it evolved into the my final submission.
 7. Implement a responsive design for full functionality on desktop/mobile
 
 # Stretch Goals
-My strech goals were to create a fluid UI/UX using JavaScript event listeners and responsive CSS. I wanted to showcase my information not only effectively, but also aesthetically. I also implemented rainbow mode in a hidden Easter Egg on the site - did you find it? :P
+My strech goals were to create a fluid UI/UX using JavaScript event listeners and responsive CSS. I wanted to showcase my information not only effectively, but also aesthetically. 
+
+I created dark and light modes for user preference.
+
+I also implemented rainbow mode in a hidden Easter Egg on the site - did you find it? :P
 
 # User Stories
 - As an HR manager, I want to be able to evaluate the skills of a candidate to determine if they are a good fit for the position
