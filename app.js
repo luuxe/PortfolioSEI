@@ -22,8 +22,6 @@ const rainbow = document.querySelector('.fa-rainbow')
 
 const luxehahn = document.querySelector('#luxe-hahn');
 
-const profilePic = document.querySelector('img')
-
 const bioText = document.querySelector('.bio-content')
 
 const bioLi = document.querySelector('.bio-li')
@@ -38,39 +36,32 @@ const experiencePage = document.querySelector('.experience')
 
 const projectsCarousel = document.querySelector('.carousel')
 
-//welcome screen toggle
-function welcome(element) {
+const mainImg = document.querySelector('.main-img')
+
+const rainbowImg = document.querySelector('.rainbow-img')
+
+//adds hide class
+function hideElement(element) {
+    element.classList.add('hide');
+}
+
+//removes hide class
+function showElement(element) {
     element.classList.remove('hide');
-    // homePageContent.classList.remove('hide');
-    // navContainer.classList.remove('hide');
-    // emptySpace.classList.remove('hide');
 }
 
-function hideWelcome() {
-    welcomePage.classList.add('hide');
-}
-
-// turn on dark mode
-// function darkMode() {
-//     body.classList.add('dark');
-//     profilePic.classList.add('dark');
-// }
-
-// moon.addEventListener('click', () => {
-//     darkMode();
-//     hideWelcome();
-//     welcome();
-// })
-
+//turn on dark mode
 function darkMode(element) {
     element.classList.add('dark')
 }
 
 moon.addEventListener('click', () => {
-    darkMode(body, profilePic);
-    // darkMode(profilePic);
-    hideWelcome();
-    welcome();
+    darkMode(body);
+    darkMode(mainImg);
+    hideElement(welcomePage);
+    showElement(homePageContent);
+    showElement(navContainer);
+    showElement(emptySpace);
 })
 
 //turn on light mode
@@ -80,11 +71,12 @@ function lightMode(element) {
 
 sun.addEventListener('click', () => {
     lightMode(body);
-    hideWelcome();
-    welcome(homePageContent);
-    welcome(navContainer);
-    welcome(emptySpace);
+    hideElement(welcomePage);
+    showElement(homePageContent);
+    showElement(navContainer);
+    showElement(emptySpace);
 })
+
 
 //turn on rainbow mode
 function rainbowMode() {
@@ -94,10 +86,11 @@ function rainbowMode() {
 }
 
 rainbow.addEventListener('click', () => {
+    rainbowMode(body);
     rainbowMode();
-    // hideWelcome();
-    // welcome();
+    rainbowMode(document.querySelector('.rainbow-img'));
 })
+
 
 //hide main page
 function hideMain() {
@@ -117,7 +110,7 @@ document.querySelector('.welcome-li').addEventListener('click', refreshPage)
 function bioPageClicked() {
     homePageContent.classList.remove('hide');
     experiencePage.classList.add('hide');
-    projectsPage.classList.add('hide');
+    projectsPage.classList.add('hide')
 }
 
 bioLi.addEventListener('click', bioPageClicked)
