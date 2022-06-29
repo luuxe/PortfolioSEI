@@ -40,6 +40,7 @@ const mainImg = document.querySelector('.main-img')
 
 const rainbowImg = document.querySelector('.rainbow-img')
 
+
 //adds hide class
 function hideElement(element) {
     element.classList.add('hide');
@@ -136,19 +137,6 @@ function experiencePageClicked() {
 }
 
 experienceLi.addEventListener('click', experiencePageClicked)
-
-
-//email functionality
-const emailIcon = document.getElementById("email-icon");
-const emailText = document.getElementById("email-text")
-
-emailIcon.addEventListener('mouseover', () => {
-    emailText.classList.remove('hide');
-})
-
-emailIcon.addEventListener('mouseout', () => {
-    emailText.classList.add('hide');
-})
 
 
 //projects carousel *** code from SEI - Corgi Carousel exercise ***
