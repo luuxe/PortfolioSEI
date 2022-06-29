@@ -39,10 +39,11 @@ const experiencePage = document.querySelector('.experience')
 const projectsCarousel = document.querySelector('.carousel')
 
 //welcome screen toggle
-function welcome() {
-    homePageContent.classList.remove('hide');
-    navContainer.classList.remove('hide');
-    emptySpace.classList.remove('hide');
+function welcome(element) {
+    element.classList.remove('hide');
+    // homePageContent.classList.remove('hide');
+    // navContainer.classList.remove('hide');
+    // emptySpace.classList.remove('hide');
 }
 
 function hideWelcome() {
@@ -50,26 +51,39 @@ function hideWelcome() {
 }
 
 // turn on dark mode
-function darkMode() {
-    body.classList.add('dark');
-    profilePic.classList.add('dark');
+// function darkMode() {
+//     body.classList.add('dark');
+//     profilePic.classList.add('dark');
+// }
+
+// moon.addEventListener('click', () => {
+//     darkMode();
+//     hideWelcome();
+//     welcome();
+// })
+
+function darkMode(element) {
+    element.classList.add('dark')
 }
 
 moon.addEventListener('click', () => {
-    darkMode();
+    darkMode(body, profilePic);
+    // darkMode(profilePic);
     hideWelcome();
     welcome();
 })
 
 //turn on light mode
-function lightMode() {
-    body.classList.remove('dark');
+function lightMode(element) {
+    element.classList.remove('dark');
 }
 
 sun.addEventListener('click', () => {
-    lightMode();
+    lightMode(body);
     hideWelcome();
-    welcome();
+    welcome(homePageContent);
+    welcome(navContainer);
+    welcome(emptySpace);
 })
 
 //turn on rainbow mode
@@ -102,8 +116,8 @@ document.querySelector('.welcome-li').addEventListener('click', refreshPage)
 //Load bio page
 function bioPageClicked() {
     homePageContent.classList.remove('hide');
-    experiencePage.classList.add('hide')
-    projectsPage.classList.add('hide')
+    experiencePage.classList.add('hide');
+    projectsPage.classList.add('hide');
 }
 
 bioLi.addEventListener('click', bioPageClicked)
