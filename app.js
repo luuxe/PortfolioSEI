@@ -10,14 +10,6 @@ const navContainer = document.querySelector('.nav-container')
 
 const emptySpace = document.querySelector('.empty-space')
 
-const darkModeSpan = document.querySelector('.dark-mode-span')
-
-const lightModeSpan = document.querySelector('.light-mode-span')
-
-const moon = document.querySelector('.fa-moon')
-
-const sun = document.querySelector('.fa-sun')
-
 const rainbow = document.querySelector('.fa-rainbow')
 
 const luxehahn = document.querySelector('#luxe-hahn');
@@ -38,8 +30,6 @@ const projectsCarousel = document.querySelector('.carousel')
 
 const mainImg = document.querySelector('.main-img')
 
-const rainbowImg = document.querySelector('.rainbow-img')
-
 
 //adds hide class
 function hideElement(element) {
@@ -56,34 +46,20 @@ function darkMode(element) {
     element.classList.add('dark')
 }
 
-moon.addEventListener('click', () => {
-    darkMode(body);
-    darkMode(mainImg);
-    hideElement(welcomePage);
-    showElement(homePageContent);
-    showElement(navContainer);
-    showElement(emptySpace);
-})
 
 //turn on light mode
 function lightMode(element) {
     element.classList.remove('dark');
 }
 
-sun.addEventListener('click', () => {
-    lightMode(body);
-    hideElement(welcomePage);
-    showElement(homePageContent);
-    showElement(navContainer);
-    showElement(emptySpace);
-})
-
 
 //turn on rainbow mode
+const rainbowImg = document.querySelector('.rainbow-img')
 function rainbowMode() {
-    body.classList.add('rainbow')
-    document.querySelector('.main-img').classList.add('hide');
-    document.querySelector('.rainbow-img').classList.remove('hide');
+    body.classList.add('rainbow');
+    hideElement(document.querySelector('.toggle-li'))
+    hideElement(mainImg);
+    showElement(document.querySelector('.rainbow-img'))
 }
 
 rainbow.addEventListener('click', () => {
@@ -93,11 +69,17 @@ rainbow.addEventListener('click', () => {
 })
 
 
-//hide main page
-function hideMain() {
-    homePageContent.classList.add('hide');
+//dark and light mode toggle function
+const checkbox = document.querySelector('input[type="checkbox"]'); 
+checkbox.addEventListener('change', function () {
+    if (checkbox.checked) {
+        darkMode(body);
+        darkMode(mainImg);
+    } else {
+        lightMode(body);
+    }
+});
 
-}
 
 //show main page
 function refreshPage() {
@@ -106,37 +88,56 @@ function refreshPage() {
 
 document.querySelector('.welcome-li').addEventListener('click', refreshPage)
 
-
+const carouselImg = document.querySelector('.carousel-image')
 //Load bio page
-function bioPageClicked() {
-    homePageContent.classList.remove('hide');
-    experiencePage.classList.add('hide');
-    projectsPage.classList.add('hide')
-}
-
-bioLi.addEventListener('click', bioPageClicked)
+bioLi.addEventListener('click', () => {
+    showElement(homePageContent);
+    hideElement(experiencePage);
+    hideElement(projectsPage);
+});
 
 
 //Load projects page
-function projectsPageClicked() {
-    hideMain();
-    document.querySelector('.carousel-image').style.display = "block";
-    experiencePage.classList.add('hide')
-    projectsPage.classList.remove('hide');
+projectsLi.addEventListener('click', () => {
+    const modal = document.getElementById("myModal");
+    const span = document.getElementsByClassName("close")[0];
+    modal.style.display = 'block';
+    span.addEventListener('click', () => {
+        modal.style.display = "none";
+    });
+    window.addEventListener('click', (event) => {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
+    hideElement(homePageContent);
+    hideElement(experiencePage);
+    showElement(projectsPage);
+    carouselImg.style.display = 'block'
     
-}
+}); 
 
-projectsLi.addEventListener('click', projectsPageClicked);
+    // const modal = document.getElementById("myModal");
+    // const span = document.getElementsByClassName("close")[0];
+    // projectsLi.addEventListener('click', () => {
+    //     modal.style.display = 'block';
+    // })
+    // span.addEventListener('click', () => {
+    //     modal.style.display = "none";
+    // }
+    // window.onclick = function (event) {
+    //         if (event.target == modal) {
+    //             modal.style.display = "none";
+    //         }
+    //     }
+
 
 //Load experience page
-function experiencePageClicked() {
-    hideMain();
-    experiencePage.classList.remove('hide')
-    projectsPage.classList.add('hide');
-    
-}
-
-experienceLi.addEventListener('click', experiencePageClicked)
+experienceLi.addEventListener('click', () => {
+    showElement(experiencePage);
+    hideElement(projectsPage);
+    hideElement(homePageContent);
+})
 
 
 //projects carousel *** code from SEI - Corgi Carousel exercise ***

@@ -14,28 +14,34 @@
   </head>
   <body>
 
-    <div class="welcome">
+    <!-- <div class="welcome">
     <h1>welcome</h1>
     <p>to enter, please select dark or light mode</p>
       <ul class="welcome-ul">
         <li><i class="fa-solid fa-moon"></i></li>
         <li><i class="fa-solid fa-sun"></i></li>
       </ul>
-  </div>
+  </div> -->
 
 
-      <!-- <i class="fa-solid fa-rainbow"></i> -->
-    <nav class="hide nav-container">
+
+    <nav class="nav-container">
       <ul class="main-ul">
         <li class="main welcome-li"><i class="fa-solid fa-house"></i></li>
         <li class="main projects-li">projects</li>
         <li class="main experience-li">experience</li>
         <li class="main bio-li">bio</li>
+        <li class="main toggle-li">
+          <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </li>
       </ul>
 
   </nav> 
 
-    <div class="hide home-page-content">  
+    <div class="home-page-content">  
       
       <img class="main-img" src="img_5180.jpg" alt="a photo of Luxe Hahn"/>
       <img class="hide rainbow-img" src="img_5187.jpg" alt="">
@@ -46,7 +52,7 @@
         <h2>/ software developer</h2>
         <p class="bio-content">
           
-          Currently I am enrolled in a Software Engineering Immersive program, absorbing as much as I can in the hopes of becoming big brain. I am an avid home cook, a published model, and a lover of the outdoors. You can find me soaking up the Austin sun at the lake or on the golf course. Otherwise, I'll be in front of my cute lil desk set up coding away. 
+          Currently, I am enrolled in a Software Engineering Immersive program, absorbing as much as I can in the hopes of becoming big brain. I am an avid home cook, a published model, and a lover of the outdoors. You can find me soaking up the Austin sun at the lake or on the golf course. Otherwise, I'll be in front of my cute lil desk set up coding away. 
         </p>
         <div class="contact">
       
@@ -63,6 +69,13 @@
       </div>
     </div>
     
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>projects page is still under construction, exit to see a preview!</p>
+      </div>
+    
+    </div>
   
     <div class="hide projects">
       <!-- carousel container -->
@@ -71,17 +84,17 @@
         <i class="fa-solid fa-angle-left previous"></i>
           
             <div class="carousel-image">
-              <img src="duck-hunt.png" alt="duck hunt project" class="duck-hunt">
+              <img src="duck-hunt.png" alt="duck hunt project" id="duck-hunt">
               <p>Duck Hunt</p>
             </div>
 
-            <div class=" carousel-image">
-              <img src="rainbow.png" alt="pixel art project" class="pixel-art">
+            <div class="carousel-image">
+              <img src="rainbow.png" alt="pixel art project" id="pixel-art">
               <p>Pixel Art <i class="fa-solid fa-rainbow"></i></p>
             </div>
 
             <div class="carousel-image">
-              <img src="spacebattle.jpg" alt="space battle project" class="space-battle">
+              <img src="spacebattle.jpg" alt="space battle project" id="space-battle">
               <p>Space Battle</p>
             </div>
         
@@ -119,7 +132,7 @@
         </div>
         </section>
 
-  <div class="hide empty-space"></div>
+  <div class="empty-space"></div>
     
   </body>
 </html>
