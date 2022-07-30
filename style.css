@@ -371,10 +371,9 @@ h2 {
     margin-bottom: 0px;
 }
 
-/* .project-description {
-    font-weight: 200;
-    font-size: 20px;
-} */
+.live-site-link {
+    color:#8f8f8f;
+}
 
 .previous, .next {
     font-size: 45px;
