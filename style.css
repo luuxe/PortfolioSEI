@@ -364,12 +364,17 @@ h2 {
     display: block;
 }
 
-.carousel-image p {
-    /* margin-top: 20px; */
+.project-name {
+    margin-top: 20px;
     font-size: 30px;
     font-weight: 900;
     margin-bottom: 0px;
 }
+
+/* .project-description {
+    font-weight: 200;
+    font-size: 20px;
+} */
 
 .previous, .next {
     font-size: 45px;
@@ -394,9 +399,12 @@ h2 {
     width: 80%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; */
 }
 
 .brand-statement-container {
@@ -442,6 +450,10 @@ h2 {
 .info {
     font-weight: 400;
     font-size: 18px;
+}
+
+.info-progress {
+    font-weight: 300;
 }
 
 p, .small {
@@ -538,7 +550,7 @@ p, .small {
     }
 
     .empty-space {
-        display: 10%;
+        display: none;
     }
 
     .home-page-content{
@@ -588,6 +600,7 @@ p, .small {
     }
 
     .experience{
+        width: 85%;
         text-align: center;
     }
     
